@@ -7,7 +7,12 @@ const post = (req, res) => {
     todo.push({todo: `${req.body.todo}`, done: false})
     res.redirect('/')
 }
+const deleteTodo = async (req, res) => {
+    todo.splice(req.params.id, 1)
+    res.redirect('/')
+}
 module.exports = {
     index,
-    post
+    post,
+    deleteTodo
 }

@@ -7,4 +7,6 @@ router.get('/', indexCtrl.index);
 
 router.post('/', indexCtrl.post)
 
+router.delete('/:id', indexCtrl.deleteTodo)
+
 module.exports = router;
